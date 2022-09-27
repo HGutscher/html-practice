@@ -7,9 +7,80 @@
     <title>Forms</title>
 </head>
 <body>
+    <!--
+        From tag is for input of user
+        type="text" for text input
+        type="email" for email
+        type="password" to make it **********
+        type="Submit" to submit all the from values
+        all labels link an orgainizes the inputs
+        id allows the reference of data for other code
+        [required] is put in text to tell user it's required when using the reqired attribute
+    -->
     <h1>Forms</h1>
-    <form name="Pizza toppings" id="Pizza" method="get">
+    <h2>Pizza</h2>
+    <form name="Pizza-Places" id="Pizza" method="get">
+        <fieldset form="Pizza" name="Pizza-Local">
+            <legend>
+                Where's the pizza???
+            </legend>
+            <label for="Pizza">Please enter favorat pizza place [required]:</label>
+            <input type="text" name="Pizza-Place" id="Pizza-Places" required />
+        
 
+            <br />
+            <br />
+
+            <label for="explanation">Please elaborate as to why you like it?</label>
+
+            <br />
+
+            <textarea id="explanation" name="explanation" rows="2" cols="20"></textarea>
+
+            <br />
+            <br />
+
+            <input type="tel" >
+        </fieldset>
+        <!--
+            <br />
+            <br />
+
+            <label for="email-address">Please enter email:</label>
+            <input type="email" name="email" id="e-mail-address" minlength="6" maxlength="40" />
+        -->
+        
+        <br />
+        <br />
+        
+        <label for="cheeses">What cheese do you want?</label>
+        <select name="Cheeses" id="Cheeses">
+            <option value="Mozza">Mozzarella</option>
+            <option value="Cheddar">Cheddar</option>
+            <option value="Gouda">Gouda</option>
+        </select>
+
+        <br />
+        <br />
+
+        <label for="Pineapple?">No Pinnaple?</label>
+        <input type="checkbox" name="Topping" id="Pineapple?" checked/>
+
+        <br />
+        <br />
+
+        <input type="button" value="Click for more sauce" />
+
+        <br />
+        <br />
+
+        <label for="password">Please enter password:</label>
+        <input type="password" name="userPassword" id="password" minlength="10" />
+
+        <br />
+        <br />
+
+        <input type="Submit" value="Submit">
     </form>
 </body>
 </html>
