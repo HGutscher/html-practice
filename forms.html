@@ -20,11 +20,20 @@
     <h1>Forms</h1>
     <h2>Pizza</h2>
     <form name="Pizza-Places" id="Pizza" method="get">
+        <!--
+            Fieldset
+            grooping box for like thing 
+            (i.e., item list or continuation of question)
+        -->
         <fieldset form="Pizza" name="Pizza-Local">
+            <!--
+                Legend  
+                text on the fieldset to catagorizie 
+            -->
             <legend>
                 Where's the pizza???
             </legend>
-            <label for="Pizza">Please enter favorat pizza place [required]:</label>
+            <label for="Pizza-Place">Please enter favorat pizza place [required]:</label>
             <input type="text" name="Pizza-Place" id="Pizza-Places" required />
         
 
@@ -34,13 +43,23 @@
             <label for="explanation">Please elaborate as to why you like it?</label>
 
             <br />
-
+             <!--
+                Textarea box for typing
+                rows >
+                     >
+                     >
+                cols ^^^^^^
+            -->
             <textarea id="explanation" name="explanation" rows="2" cols="20"></textarea>
 
             <br />
             <br />
 
-            <input type="tel" >
+            <!--
+                <label for="Pizza-Phone">Please enter the Pizza Place's phone number [required]</label>
+                <br />
+                <input type="tel" name="Pizza-Phone" id="telephone" minlength="14" maxlength="22" required>
+            -->
         </fieldset>
         <!--
             <br />
@@ -54,17 +73,32 @@
         <br />
         
         <label for="cheeses">What cheese do you want?</label>
+        <!--
+            Select
+            drop down menu
+            not good for blind people
+        -->
         <select name="Cheeses" id="Cheeses">
-            <option value="Mozza">Mozzarella</option>
-            <option value="Cheddar">Cheddar</option>
-            <option value="Gouda">Gouda</option>
+            <optgroup label="Dairy">
+                <option value="Mozza">Mozzarella</option>
+                <option value="Cheddar">Cheddar</option>
+                <option value="Gouda">Gouda</option>
+            </optgroup>
+            <optgroup label="Vegan">
+                <option value="Soy">Soy based</option>
+            </optgroup>
         </select>
 
         <br />
         <br />
 
+        <!--
+            Checkbox
+            recomended to be grooped if like
+            Put label after so looks better
+        -->
+        <input type="checkbox" name="Topping" id="Pineapple?" value="Ew" checked/>
         <label for="Pineapple?">No Pinnaple?</label>
-        <input type="checkbox" name="Topping" id="Pineapple?" checked/>
 
         <br />
         <br />
